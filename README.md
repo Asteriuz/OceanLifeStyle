@@ -5,7 +5,7 @@
 <p align="center">
 <picture>
   <!-- <source media="(prefers-color-scheme: dark)" srcset="./Assets/Logo/DarkLogo.svg"> -->
-  <img alt="Logo Ocean Style" src="./imagens/logo/OceanCircle.png" width=300>
+  <img alt="Logo Ocean Style" src="./utils/imagens/logo/OceanCircle.png" width=300>
 </picture>
 
 </p>
@@ -23,12 +23,12 @@
 
 <h2 name="sobre">📖 Sobre a Global Solution</h2>
 
-| _Global Solution 2_ |                                       |
-| ------------------- | ------------------------------------- |
-| _Curso_             | Análise e Desenvolvimento de Sistemas |
-| _Turma_             | 2TDSS                                 |
-| _Período_           | 1º                                    |
-| _Tema_              | [PDF](./pdfs/GlobalSolution.pdf)      |
+| _Global Solution 2_ |                                        |
+| ------------------- | -------------------------------------- |
+| _Curso_             | Análise e Desenvolvimento de Sistemas  |
+| _Turma_             | 2TDSS                                  |
+| _Período_           | 1º                                     |
+| _Tema_              | [PDF](./utils/pdfs/GlobalSolution.pdf) |
 
 <h2 name="requisitos">📋 Requisitos</h2>
 
@@ -55,18 +55,21 @@
 - [ ] (30 pts) Carga de dados: para cada tabela crie uma Procedure para efetuar a carga de dados daquela tabela. A carga de dados deve ser feita por passagem de parâmetro, não façam uso de hard-code nas Procedures. Em todos os blocos devem existir a EXCEPTION WHEN OTHERS e mais dois tratamentos de exceção à escolha do grupo. Quando ocorrer uma exceção, o nome da procedure, o nome do usuário, a data de ocorrência de erro, o código de erro e a mensagem de erro devem ser salvos em uma tabela de registro de logs. Para as turmas que não chegaram ao tema Procedures, criar blocos anônimos utilizando variáveis de substituição para informar os valores a serem inseridos.
 
 - [ ] (30 pts) Relatórios: Crie quatro blocos anônimos que usem cursor explícito e tomada de decisão. Um dos blocos anônimos deve listar todos os dados de uma tabela, mostrar os dados numéricos sumarizados e mostrar a sumarização dos dados agrupados por um critério definido pelo grupo.
+
   - Exemplo do relatório para facilitar a visualização:
-    | Campo1 | Campo2 | Valor |
-    | ------ | ------ | ----- |
-    | 1 | 1 | 1000 |
-    | 1 | 2 | 2000 |
-    | 1 | 3 | 3000 |
-    | Sub-Total | | 6000 |
-    | 2 | 1 | 4000 |
-    | 2 | 2 | 5000 |
-    | 2 | 3 | 6000 |
-    | Sub-Total | | 15000 |
-    | Total Geral | | 21000 |
+
+    | Campo1      | Campo2 | Valor |
+    | ----------- | ------ | ----- |
+    | 1           | 1      | 1000  |
+    | 1           | 2      | 2000  |
+    | 1           | 3      | 3000  |
+    | Sub-Total   |        | 6000  |
+    | 2           | 1      | 4000  |
+    | 2           | 2      | 5000  |
+    | 2           | 3      | 6000  |
+    | Sub-Total   |        | 15000 |
+    | Total Geral |        | 21000 |
+
 - [ ] Entrega: arquivo no portal.
 
 <h3>DEVOPS TOOLS E CLOUD COMPUTING</h3>

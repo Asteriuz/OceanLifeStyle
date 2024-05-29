@@ -58,9 +58,9 @@
   - Exemplo do relatório para facilitar a visualização:
     | Campo1 | Campo2 | Valor |
     | ------ | ------ | ----- |
-    | 1 | 1 | 000 |
-    | 1 | 2 | 000 |
-    | 1 | 3 | 000 |
+    | 1 | 1 | 1000 |
+    | 1 | 2 | 2000 |
+    | 1 | 3 | 3000 |
     | Sub-Total | | 6000 |
     | 2 | 1 | 4000 |
     | 2 | 2 | 5000 |

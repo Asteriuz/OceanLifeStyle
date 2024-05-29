@@ -27,7 +27,7 @@
 | ------------------- | ------------------------------------- |
 | _Curso_             | Análise e Desenvolvimento de Sistemas |
 | _Turma_             | 2TDSS                                 |
-| _Período_           | 1º                                    |
+| _Período_           | 3º                                    |
 | _Tema_              | [PDF](./pdfs/GlobalSolution.pdf)      |
 
 <h2 name="requisitos">📋 Requisitos</h2>

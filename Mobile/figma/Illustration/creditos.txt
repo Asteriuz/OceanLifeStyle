@@ -5,3 +5,5 @@
 <a href="https://storyset.com/job">Job illustrations by Storyset</a>
 
 <a href="https://storyset.com/job">Job illustrations by Storyset</a>
+
+<a href="https://storyset.com/event">Event illustrations by Storyset</a>

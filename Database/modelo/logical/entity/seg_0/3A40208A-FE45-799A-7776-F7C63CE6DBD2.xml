@@ -22,8 +22,9 @@
 <engineerTo>
 <item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="data" id="BFA9208E-555F-E2A2-986C-BF5B76E4ABAA">
@@ -34,7 +35,9 @@
 <item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nivel_ruido" id="441F56A3-C652-7230-7529-6D73230A78C1">
@@ -45,7 +48,9 @@
 <item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="resultado" id="B9230A70-05E2-AB3A-0B09-23FCCC09BF99">
@@ -56,8 +61,11 @@
 <item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="observacoes" id="8328E7F9-F3FD-8852-6E09-EB87A85B1C00">
 <createdBy>augus</createdBy>
@@ -67,32 +75,40 @@
 <item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="placa" id="1FFDDC45-4FDA-85CD-FE0D-C48ECE3ED3A1">
+<Attribute name="TIE" id="5F5F8302-0B50-CCF6-1904-501B8E256FAF">
 <createdBy>augus</createdBy>
-<createdTime>2024-05-30 00:04:28 UTC</createdTime>
-<generatorID>440DE464-EA7C-6DD5-FD69-58E69AC55A6B</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<engineerTo>
-<item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
-</engineerTo>
-<referedAttribute>CD0A03E5-8EAD-427B-88B3-A3909FBF3FD1</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="TIE" id="77CECE10-C293-BFAA-07AD-221F2C10C109">
-<createdBy>augus</createdBy>
-<createdTime>2024-05-30 00:04:28 UTC</createdTime>
+<createdTime>2024-05-31 09:13:45 UTC</createdTime>
 <generatorID>440DE464-EA7C-6DD5-FD69-58E69AC55A6B</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <engineerTo>
 <item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
 </engineerTo>
 <referedAttribute>5E0CA037-09A8-6882-9E9F-A1D9512BEFBE</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7BAACC54-541E-069E-70C1-7AE7EDFBAD60" name="Vistoria PK">
+<createdBy>augus</createdBy>
+<createdTime>2024-05-31 08:54:27 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="7CA3CA6B-F85C-9E0C-E92F-37CCE4FE3DE2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8EB49CB6-B1CE-AC0D-A181-8271A94DBFF6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

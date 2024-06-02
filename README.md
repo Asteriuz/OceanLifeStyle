@@ -122,23 +122,23 @@ _Opção 2: Implementação em uma Virtual Machine em Nuvem Pública (MS Azure),
 
 <h3>JAVA ADVANCED</h3>
 
-- [ ] Utilização de anotações do Spring para configuração de beans e injeção de dependências
+- [x] Utilização de anotações do Spring para configuração de beans e injeção de dependências
 
-- [ ] Camada model/DTO com utilização correta dos métodos de acesso
+- [x] Camada model/DTO com utilização correta dos métodos de acesso
 
-- [ ] Persistência de dados com Spring Data JPA
+- [x] Persistência de dados com Spring Data JPA
 
 - [ ] Mapeamento de relacionamentos entre tabelas e pesquisas
 
-- [ ] Validação com Bean Validation
+- [x] Validação com Bean Validation
 
-- [ ] Paginação para recursos com muitos registros
+- [x] Paginação para recursos com muitos registros
 
-- [ ] HATEOAS para atender ao Nível 3 de Maturidade proposto por Leonard Richardson
+- [x] HATEOAS para atender ao Nível 3 de Maturidade proposto por Leonard Richardson
 
-- [ ] Tratamento adequado dos erros e exceptions
+- [x] Tratamento adequado dos erros e exceptions
 
-- [ ] Documentação com SWAGGER
+- [x] Documentação com SWAGGER
 
 - [ ] Deploy em nuvem
 

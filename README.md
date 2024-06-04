@@ -78,17 +78,15 @@ O grupo tem duas opções para a entrega (a nota pode valer de 0 a 100 dependend
 
 _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas disciplinas:_
 
-- ADVANCED BUSINESS DEVELOPMENT WITH .NET
 - JAVA ADVANCED
-- MOBILE APP DEVELOPMENT
 
-  - [ ] Realizar uma dissertação sobre seu projeto, seus objetivos e solução proposta (5 pontos)
+  - [x] Realizar uma dissertação sobre seu projeto, seus objetivos e solução proposta (5 pontos)
 
   - [ ] Desenhar a Arquitetura do projeto de DevOps (Draw.io, Visual Paradigm ou Excalidraw) (30 pontos)
 
-  - [ ] Entregar Arquivo PDF com capa incluindo o nome do Grupo (Solução) e integrantes e RM de cada aluno (Obrigatório)
+  - [x] Entregar Arquivo PDF com capa incluindo o nome do Grupo (Solução) e integrantes e RM de cada aluno (Obrigatório)
 
-  - [ ] Link do GitHub com os Códigos-fontes, README.md, Dockerfile e Arquivo YAML (Obrigatório)
+  - [x] Link do GitHub com os Códigos-fontes, README.md, Dockerfile e Arquivo YAML (Obrigatório)
 
   - [ ] Persistência de dados acompanhada de um Volume (15 pontos)
 
@@ -99,26 +97,6 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
       - Utilize um diretório padrão
       - Utilize um usuário que não tenha privilégios administrativos para rodar seu App
       - Utilize um ARG e um ENV no Dockerfile
-
-_Opção 2: Implementação em uma Virtual Machine em Nuvem Pública (MS Azure), como se fosse um ambiente de desenvolvimento, de um dos projetos solicitados nas disciplinas:_
-
-- ADVANCED BUSINESS DEVELOPMENT WITH .NET
-- JAVA ADVANCED
-- MOBILE APP DEVELOPMENT
-
-  - [ ] Realizar uma dissertação sobre seu projeto, seus objetivos e solução proposta (5 pontos)
-
-  - [ ] Desenhar a Arquitetura do projeto de DevOps (Draw.io, Visual Paradigm ou Excalidraw) (30 pontos)
-
-  - [ ] Entregar Arquivo PDF com capa incluindo o nome do Grupo (Solução) e integrantes e RM de cada aluno (Obrigatório)
-
-  - [ ] Link do GitHub com os Códigos-fontes, README.md, etc. (Obrigatório)
-
-  - [ ] Informe quais ferramentas foram instaladas na VM. Nome, versão e propósito (15 pontos)
-
-  - [ ] Link do vídeo no YouTube comprovando o funcionamento do App, partindo desde a criação da VM até a persistência de dados. Mostre todos os detalhes de cada passo (50 pontos)
-    - Observação:
-      - NÃO UTILIZAR O H2 como Banco de Dados para a persistência
 
 <h3>JAVA ADVANCED</h3>
 

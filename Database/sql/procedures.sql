@@ -356,7 +356,7 @@ END;
 
 SELECT * FROM GS_EMPRESA;
 
---ENDERE�O --PROBLEMA
+--ENDEREÇO
 BEGIN
     gs_inserir_endereco('Rua D', '400', '04004004', 1, 1);
     gs_inserir_endereco('Rua E', '500', '05005005', 2, 2);
@@ -366,7 +366,7 @@ END;
 
 SELECT * FROM GS_ENDERECO;
 
---VEICULO --PROBLEMA
+--VEICULO
 BEGIN
     gs_inserir_veiculo('Veiculo D', 'Tipo 4', 'Motor 4', 'Sonar 4', 1, 'http://imagemD.com');
     gs_inserir_veiculo('Veiculo E', 'Tipo 5', 'Motor 5', 'Sonar 5', 2, 'http://imagemE.com');
@@ -398,7 +398,7 @@ END;
 SELECT * FROM GS_INSPETOR;
 
 
--- INSPETOR VISTORIA -- PROBLEMA
+-- INSPETOR VISTORIA
 BEGIN
     gs_inserir_inspetor_vistoria(1, 1);
     gs_inserir_inspetor_vistoria(2, 2);

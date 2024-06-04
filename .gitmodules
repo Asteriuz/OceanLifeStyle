@@ -1,3 +1,6 @@
 [submodule "JavaOceanStyle"]
 	path = JavaOceanStyle
 	url = https://github.com/Asteriuz/JavaOceanStyle
+[submodule "DevOpsOceanStyle"]
+	path = DevOpsOceanStyle
+	url = https://github.com/Asteriuz/DevOpsOceanStyle

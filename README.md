@@ -46,15 +46,15 @@
 
 <h3>MASTERING RELATIONAL AND NON-RELATIONAL DATABASE</h3>
 
-- [ ] (10 pts) Contexto: crie um texto contextualizando o seu projeto e liste os seus requisitos e regras de negócio.
+- [x] (10 pts) Contexto: crie um texto contextualizando o seu projeto e liste os seus requisitos e regras de negócio.
 
-- [ ] (10 pts) Modelagem: crie o modelo entidade-relacionamento (MER) físico das tabelas que irão compor a solução de persistência de dados em um banco de dados relacional Oracle. Utilize a ferramenta Oracle Data Modeler para essa tarefa. As tabelas devem coincidir com os objetos desenvolvidos no Front/Back do seu trabalho de codificação.
+- [x] (10 pts) Modelagem: crie o modelo entidade-relacionamento (MER) físico das tabelas que irão compor a solução de persistência de dados em um banco de dados relacional Oracle. Utilize a ferramenta Oracle Data Modeler para essa tarefa. As tabelas devem coincidir com os objetos desenvolvidos no Front/Back do seu trabalho de codificação.
 
-- [ ] (20 pts) Scripts DDL: crie os scripts com os comandos DDL gerados pelo Oracle Data Modeler. Execute o script no banco de dados Oracle.
+- [x] (20 pts) Scripts DDL: crie os scripts com os comandos DDL gerados pelo Oracle Data Modeler. Execute o script no banco de dados Oracle.
 
-- [ ] (30 pts) Carga de dados: para cada tabela crie uma Procedure para efetuar a carga de dados daquela tabela. A carga de dados deve ser feita por passagem de parâmetro, não façam uso de hard-code nas Procedures. Em todos os blocos devem existir a EXCEPTION WHEN OTHERS e mais dois tratamentos de exceção à escolha do grupo. Quando ocorrer uma exceção, o nome da procedure, o nome do usuário, a data de ocorrência de erro, o código de erro e a mensagem de erro devem ser salvos em uma tabela de registro de logs. Para as turmas que não chegaram ao tema Procedures, criar blocos anônimos utilizando variáveis de substituição para informar os valores a serem inseridos.
+- [x] (30 pts) Carga de dados: para cada tabela crie uma Procedure para efetuar a carga de dados daquela tabela. A carga de dados deve ser feita por passagem de parâmetro, não façam uso de hard-code nas Procedures. Em todos os blocos devem existir a EXCEPTION WHEN OTHERS e mais dois tratamentos de exceção à escolha do grupo. Quando ocorrer uma exceção, o nome da procedure, o nome do usuário, a data de ocorrência de erro, o código de erro e a mensagem de erro devem ser salvos em uma tabela de registro de logs. Para as turmas que não chegaram ao tema Procedures, criar blocos anônimos utilizando variáveis de substituição para informar os valores a serem inseridos.
 
-- [ ] (30 pts) Relatórios: Crie quatro blocos anônimos que usem cursor explícito e tomada de decisão. Um dos blocos anônimos deve listar todos os dados de uma tabela, mostrar os dados numéricos sumarizados e mostrar a sumarização dos dados agrupados por um critério definido pelo grupo.
+- [x] (30 pts) Relatórios: Crie quatro blocos anônimos que usem cursor explícito e tomada de decisão. Um dos blocos anônimos deve listar todos os dados de uma tabela, mostrar os dados numéricos sumarizados e mostrar a sumarização dos dados agrupados por um critério definido pelo grupo.
 
   - Exemplo do relatório para facilitar a visualização:
 
@@ -70,7 +70,7 @@
     | Sub-Total   |        | 15000 |
     | Total Geral |        | 21000 |
 
-- [ ] Entrega: arquivo no portal.
+- [x] Entrega: arquivo no portal.
 
 <h3>DEVOPS TOOLS E CLOUD COMPUTING</h3>
 
@@ -183,37 +183,37 @@ _Opção 2: Implementação em uma Virtual Machine em Nuvem Pública (MS Azure),
 
 <h3>MOBILE APP DEVELOPMENT</h3>
 
-- [ ] Utilizar navegação no aplicativo conforme sua escolha (10 pts)
+- [x] Utilizar navegação no aplicativo conforme sua escolha (10 pts)
 
 - [ ] Implementar um CRUD com Firebase e/ou uma API REST (para API REST: forneça um endpoint funcional fakeapi ou mock) (10 pts)
 
 - [ ] Tratar os erros das requisições de forma adequada (20 pts)
 
-- [ ] Estilização do aplicativo, incluindo cores, fontes e imagens personalizadas (30 pts)
+- [x] Estilização do aplicativo, incluindo cores, fontes e imagens personalizadas (30 pts)
 
-- [ ] Arquitetura: será avaliada a organização dos arquivos, nomes das variáveis, funções e componentes utilizados (30 pts)
+- [x] Arquitetura: será avaliada a organização dos arquivos, nomes das variáveis, funções e componentes utilizados (30 pts)
 
 <h3>ADVANCED BUSINESS DEVELOPMENT WITH .NET</h3>
 
 - _Requisitos da Entrega_
 
-  - [ ] Aplicação MVC usando de forma correta a separação das regras de negócios nas controllers e views (20 pontos)
+  - [x] Aplicação MVC usando de forma correta a separação das regras de negócios nas controllers e views (20 pontos)
 
-  - [ ] Utilização dos pilares da Programação Orientada a Objetos (Abstração, Herança, Polimorfismo e Encapsulamento) (10 pontos)
+  - [x] Utilização dos pilares da Programação Orientada a Objetos (Abstração, Herança, Polimorfismo e Encapsulamento) (10 pontos)
 
-  - [ ] Conexão com banco de dados Oracle estabelecida e funcional (20 pontos)
+  - [x] Conexão com banco de dados Oracle estabelecida e funcional (20 pontos)
 
-  - [ ] Models bem planejadas, com annotation (identificação de tabelas e colunas) (15 pontos)
+  - [x] Models bem planejadas, com annotation (identificação de tabelas e colunas) (15 pontos)
 
-  - [ ] Relacionamento 1..1, 1..N e N..N (10 pontos)
+  - [x] Relacionamento 1..1, 1..N e N..N (10 pontos)
 
-  - [ ] Utilização do design pattern Repository (10 pontos)
+  - [x] Utilização do design pattern Repository (10 pontos)
 
-  - [ ] Utilização das convenção de nomenclaturas de classes e variáveis (5 pontos)
+  - [x] Utilização das convenção de nomenclaturas de classes e variáveis (5 pontos)
 
-  - [ ] CRUD para todas as Models planejadas (10 pontos)
+  - [x] CRUD para todas as Models planejadas (10 pontos)
 
-  - [ ] Diagrama Modelo Entidade Relacionamento (10 pontos)
+  - [x] Diagrama Modelo Entidade Relacionamento (10 pontos)
 
 - _Forma de Entrega_
   - Arquivo .txt com o RM, Nome do aluno e a turma de cada integrante.

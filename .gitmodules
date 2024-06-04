@@ -4,3 +4,6 @@
 [submodule "DevOpsOceanStyle"]
 	path = DevOpsOceanStyle
 	url = https://github.com/Asteriuz/DevOpsOceanStyle
+[submodule ".NetOceanStyle"]
+	path = .NetOceanStyle
+	url = https://github.com/lucas-pmelo/.NetOceanStyle

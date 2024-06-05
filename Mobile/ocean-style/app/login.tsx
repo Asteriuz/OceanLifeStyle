@@ -4,7 +4,15 @@ import ShowEye from "@/assets/icons/show_eye";
 import { COLORS } from "@/constants/Colors";
 import { textStyles } from "@/constants/Text";
 import { useEffect, useState } from "react";
-import { Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  ActivityIndicator,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { app } from "@/firebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -13,9 +21,14 @@ import { router } from "expo-router";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
   const [isLogin, setIsLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [showWarning, setShowWarning] = useState(false);
+
+  const [emailValid, setEmailValid] = useState(true);
+  const [passwordValid, setPasswordValid] = useState(true);
+
+  const [loading, setLoading] = useState(false);
 
   function handleShowPassword() {
     setShowPassword(!showPassword);
@@ -24,28 +37,39 @@ export default function Login() {
   const auth = getAuth(app);
 
   const handleAuth = async (auth: any, email: string, password: string) => {
-    if (!email || !password) {
-      alert("Preencha todos os campos");
+    if (!email.trim() && !password.trim()) {
+      setEmailValid(false);
+      setPasswordValid(false);
+      return;
+    }
+    if (!email.trim()) {
+      setEmailValid(false);
+      return;
+    }
+    if (!password.trim()) {
+      setPasswordValid(false);
       return;
     }
     try {
+      setLoading(true);
       setEmail(email.trim());
       const user = await signInWithEmailAndPassword(auth, email, password);
       setIsLogin(true);
       router.replace("/(tabs)");
     } catch (error) {
       console.log(error);
+      setShowWarning(true);
+      setLoading(false);
     }
   };
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        {/* <View style={styles.placeholder}>
-          <ImagePlaceholder color={COLORS.subtleDark} width={24} height={24} />
-        </View> */}
-        {/* width 100% height maintain aspect ratio */}
-        <Image source={require("@/assets/images/illustration/jetski.png")} style={{ width: 344, height: 229 }} />
+        <Image
+          source={require("@/assets/images/illustration/jetski.png")}
+          style={{ width: 344, height: 229 }}
+        />
         <Text
           style={{
             fontFamily: "WorkSans_600SemiBold",
@@ -56,24 +80,64 @@ export default function Login() {
         >
           Login
         </Text>
+        {showWarning && (
+          <View
+            style={{
+              backgroundColor: "#ffcccc",
+              padding: 8,
+              borderRadius: 8,
+              justifyContent: "center",
+              alignItems: "center",
+              marginVertical: -16,
+            }}
+          >
+            <Text style={[textStyles.label_medium, { color: "#cc0000" }]}>
+              USUÁRIO OU SENHA INCORRETOS!
+            </Text>
+          </View>
+        )}
         <View style={{ gap: 24 }}>
           <View style={{ gap: 8 }}>
-            <Text style={textStyles.label_medium}>Email</Text>
+            <Text
+              style={[
+                textStyles.label_medium,
+                !emailValid && { color: "#cc0000" },
+              ]}
+            >
+              Email {!emailValid && "*"}
+            </Text>
             <TextInput
               selectionColor={COLORS.primary}
               value={email}
-              onChangeText={setEmail}
-              style={styles.input}
+              onChangeText={(text) => {
+                setEmail(text);
+                setEmailValid(true);
+              }}
+              style={[styles.input, !emailValid && { borderColor: "#cc0000" }]}
+              keyboardType="email-address"
             />
           </View>
           <View style={{ gap: 8 }}>
-            <Text style={textStyles.label_medium}>Senha</Text>
+            <Text
+              style={[
+                textStyles.label_medium,
+                !passwordValid && { color: "#cc0000" },
+              ]}
+            >
+              Senha {!passwordValid && "*"}
+            </Text>
             <View>
               <TextInput
                 selectionColor={COLORS.primary}
                 value={password}
-                onChangeText={setPassword}
-                style={styles.input}
+                onChangeText={(text) => {
+                  setPassword(text);
+                  setPasswordValid(true);
+                }}
+                style={[
+                  styles.input,
+                  !passwordValid && { borderColor: "#cc0000" },
+                ]}
                 secureTextEntry={!showPassword}
               />
               <Pressable
@@ -94,7 +158,10 @@ export default function Login() {
             </Pressable>
           </View>
         </View>
-        <Pressable onPress={() => handleAuth(auth, email, password)}>
+        <Pressable
+          onPress={() => handleAuth(auth, email, password)}
+          disabled={loading}
+        >
           <View
             style={{
               width: 320,
@@ -111,6 +178,11 @@ export default function Login() {
           </View>
         </Pressable>
       </View>
+      {loading && (
+        <View style={styles.loadingOverlay}>
+          <ActivityIndicator size="large" color={COLORS.primary} />
+        </View>
+      )}
     </SafeAreaView>
   );
 }
@@ -142,5 +214,11 @@ const styles = StyleSheet.create({
     borderColor: COLORS.subtleLight,
     paddingHorizontal: 16,
     paddingVertical: 12,
+  },
+  loadingOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0, 0, 0, 0.25)",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

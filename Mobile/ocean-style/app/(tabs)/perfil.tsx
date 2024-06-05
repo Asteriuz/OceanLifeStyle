@@ -1,7 +1,14 @@
 import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import { COLORS } from "@/constants/Colors";
 import { textStyles } from "@/constants/Text";
-import { Dimensions, Image, Pressable, StyleSheet, Text, View } from "react-native";
+import {
+  Dimensions,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { auth } from "@/firebaseConfig";
 import { router } from "expo-router";
@@ -11,8 +18,8 @@ export default function TabOneScreen() {
 
   const handleLogout = async () => {
     try {
-      await auth.signOut();
-      router.replace("/login");
+      await auth.signOut(); 
+      router.replace("/");
     } catch (error) {
       console.log(error);
     }
@@ -21,12 +28,13 @@ export default function TabOneScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <View style={styles.container}>
-        {/* <View style={styles.placeholder}>
-          <ImagePlaceholder color={COLORS.subtleLight} height={24} width={24} />
-        </View> */}
         <Image
           source={require("@/assets/images/illustration/naufrago.png")}
-          style={{ width: deviceWidth - 48, height: deviceWidth - 60, overflow: "visible"}}
+          style={{
+            width: deviceWidth - 48,
+            height: deviceWidth - 60,
+            overflow: "visible",
+          }}
         />
         <View
           style={{

@@ -13,7 +13,6 @@ import { COLORS } from "@/constants/Colors";
 import ProgressBar from "@/components/ProgressBar";
 
 export {
-  // Catch any errors thrown by the Layout component.
   ErrorBoundary,
 } from "expo-router";
 
@@ -21,7 +20,6 @@ export const unstable_settings = {
   initialRouteName: "(tabs)",
 };
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -33,7 +31,6 @@ export default function RootLayout() {
     WorkSans_600SemiBold,
   });
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
   }, [error]);
@@ -72,7 +69,6 @@ function RootLayoutNav() {
         options={{
           title: "Recuperar senha",
           animation: "slide_from_right",
-          // headerTitle: () => <ProgressBar progress={0.5} />,
         }}
       />
       <Stack.Screen

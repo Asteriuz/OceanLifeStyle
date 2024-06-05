@@ -82,9 +82,6 @@ export default function Register() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        {/* <View style={styles.placeholder}>
-          <ImagePlaceholder color={COLORS.subtleDark} width={24} height={24} />
-        </View> */}
         <Image
           source={require("@/assets/images/illustration/dragon-boat.png")}
           style={{ width: 304, height: 191 }}

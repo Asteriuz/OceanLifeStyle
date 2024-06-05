@@ -10,9 +10,6 @@ export default function TabOneScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <View style={styles.container}>
-        {/* <View style={styles.placeholder}>
-          <ImagePlaceholder color={COLORS.subtleLight} height={24} width={24} />
-        </View> */}
         <Image
           source={require("@/assets/images/illustration/lifeguard.png")}
           style={{ width: deviceWidth - 48, height: deviceWidth - 48 }}

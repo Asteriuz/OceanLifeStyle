@@ -12,9 +12,6 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        {/* <View style={styles.placeholder}>
-          <ImagePlaceholder color={COLORS.subtleDark} width={24} height={24} />
-        </View> */}
         <Image source={require("@/assets/images/logo/logo.png")} style={{ width: 276, height: 176.75 }} />
         <View style={{ alignItems: "center", gap: 12 }}>
           <Text
@@ -82,10 +79,6 @@ export default function HomeScreen() {
           <Text style={{ color: COLORS.primary }}>Política de Privacidade</Text>
         </Text>
       </View>
-      {/* <View style={styles.backgroundContainer}>
-        <ImagePlaceholder color={COLORS.subtleDark} width={24} height={24} />
-      </View> */}
-      {/* width = deviceWidth, height = 168 */}
       <Image source={require("@/assets/images/illustration/underwater-silhouette.png")} style={{ width: deviceWidth, height: 168 }} />
     </SafeAreaView>
   );

@@ -106,7 +106,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
 - [x] Persistência de dados com Spring Data JPA
 
-- [ ] Mapeamento de relacionamentos entre tabelas e pesquisas
+- [x] Mapeamento de relacionamentos entre tabelas e pesquisas
 
 - [x] Validação com Bean Validation
 

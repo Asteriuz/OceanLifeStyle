@@ -73,6 +73,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="search"
+        options={{
+          tabBarLabel: () => null,
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="search" color={color} label="Vistoria" />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="notifications"
         options={{
           tabBarLabel: () => null,

@@ -8,5 +8,6 @@ export type RootStackParamList = {
         tie: string;
         noise: number;
         data: string;
+        place: string;
     };
 };

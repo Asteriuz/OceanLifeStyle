@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "./Colors";
 
-export const textStyles = StyleSheet.create({
+export const TEXTSTYLES = StyleSheet.create({
   headline_large: {
     fontFamily: "WorkSans_500Medium",
     fontSize: 32,

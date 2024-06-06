@@ -7,7 +7,7 @@ import Home from "@/assets/icons/home";
 import Bell from "@/assets/icons/bell";
 import User from "@/assets/icons/user";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>["name"];
@@ -30,7 +30,7 @@ function TabBarIcon(props: {
       })()}
       <Text
         style={[
-          textStyles.label_small,
+          TEXTSTYLES.label_small,
           {
             color: props.color,
             marginTop: 5,
@@ -72,11 +72,11 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* tab details but not show in tab bar */}
       <Tabs.Screen
         name="details"
         options={{
           href: null,
+          unmountOnBlur: true,
         }}
       />
       <Tabs.Screen

@@ -1,6 +1,6 @@
 import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
 import { auth } from "@/firebaseConfig";
 import { router } from "expo-router";
 import { sendPasswordResetEmail } from "firebase/auth";
@@ -62,7 +62,7 @@ export default function ResetPassword() {
           <Text style={styles.title}>Esqueceu sua Senha?</Text>
           <Text
             style={[
-              textStyles.label_large,
+              TEXTSTYLES.label_large,
               {
                 color: COLORS.subtleDark,
                 textAlign: "center",
@@ -76,7 +76,7 @@ export default function ResetPassword() {
           </Text>
         </View>
         <View style={{ gap: 8 }}>
-          <Text style={textStyles.label_medium}>Email</Text>
+          <Text style={TEXTSTYLES.label_medium}>Email</Text>
           <TextInput
             style={styles.input}
             keyboardType="email-address"
@@ -103,14 +103,14 @@ export default function ResetPassword() {
             }}
             onPress={() => handleResetPassword(email)}
           >
-            <Text style={[textStyles.headline_small, { color: "white" }]}>
+            <Text style={[TEXTSTYLES.headline_small, { color: "white" }]}>
               Enviar
             </Text>
           </Pressable>
           <View>
             <Pressable onPress={() => router.back()}>
               <Text
-                style={[textStyles.label_medium, { color: COLORS.primary }]}
+                style={[TEXTSTYLES.label_medium, { color: COLORS.primary }]}
               >
                 Voltar
               </Text>

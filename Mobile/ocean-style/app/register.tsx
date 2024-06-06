@@ -1,9 +1,7 @@
-import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
 import Checkbox from "expo-checkbox";
-import { Link, router, useLocalSearchParams } from "expo-router";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { router } from "expo-router";
 import { useEffect, useState } from "react";
 import {
   Dimensions,
@@ -89,7 +87,7 @@ export default function Register() {
 
         <View style={{ gap: 16 }}>
           <View style={{ gap: 8 }}>
-            <Text style={textStyles.label_medium}>CEP</Text>
+            <Text style={TEXTSTYLES.label_medium}>CEP</Text>
             <TextInput
               selectionColor={COLORS.primary}
               value={cep}
@@ -100,7 +98,7 @@ export default function Register() {
           </View>
           <View style={{ gap: 8, flexDirection: "row" }}>
             <View style={{ gap: 8 }}>
-              <Text style={textStyles.label_medium}>Logradouro</Text>
+              <Text style={TEXTSTYLES.label_medium}>Logradouro</Text>
               <TextInput
                 selectionColor={COLORS.primary}
                 value={logradouro}
@@ -114,7 +112,7 @@ export default function Register() {
               />
             </View>
             <View style={{ gap: 8 }}>
-              <Text style={textStyles.label_medium}>Nº</Text>
+              <Text style={TEXTSTYLES.label_medium}>Nº</Text>
               <TextInput
                 selectionColor={COLORS.primary}
                 value={numero}
@@ -131,7 +129,7 @@ export default function Register() {
           </View>
           <View style={{ gap: 8, flexDirection: "row" }}>
             <View style={{ gap: 8 }}>
-              <Text style={textStyles.label_medium}>Cidade</Text>
+              <Text style={TEXTSTYLES.label_medium}>Cidade</Text>
               <TextInput
                 selectionColor={COLORS.primary}
                 value={cidade}
@@ -145,7 +143,7 @@ export default function Register() {
               />
             </View>
             <View style={{ gap: 8 }}>
-              <Text style={textStyles.label_medium}>Estado</Text>
+              <Text style={TEXTSTYLES.label_medium}>Estado</Text>
               <TextInput
                 selectionColor={COLORS.primary}
                 value={estado}
@@ -160,7 +158,7 @@ export default function Register() {
             </View>
           </View>
           <View style={{ gap: 8 }}>
-            <Text style={textStyles.label_medium}>CPF</Text>
+            <Text style={TEXTSTYLES.label_medium}>CPF</Text>
             <TextInput
               selectionColor={COLORS.primary}
               value={cpf}
@@ -186,7 +184,7 @@ export default function Register() {
           />
           <Text
             style={[
-              textStyles.label_small,
+              TEXTSTYLES.label_small,
               {
                 color: COLORS.subtleDark,
                 fontSize: 13,
@@ -213,7 +211,7 @@ export default function Register() {
               alignItems: "center",
             }}
           >
-            <Text style={[textStyles.label_large, { color: COLORS.white }]}>
+            <Text style={[TEXTSTYLES.label_large, { color: COLORS.white }]}>
               Registrar
             </Text>
           </View>

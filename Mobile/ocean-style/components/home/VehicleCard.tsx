@@ -1,10 +1,11 @@
 import RightArrow from "@/assets/icons/right_arrow";
 import { COLORS } from "@/constants/Colors";
 import { RootStackParamList } from "@/constants/RootStackParamList";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
+import { Image } from "expo-image";
 import { useNavigation, useRouter } from "expo-router";
 import { useState } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { NativeStackNavigationProp } from "react-native-screens/lib/typescript/native-stack/types";
 
 type DetailsProps = NativeStackNavigationProp<
@@ -13,10 +14,14 @@ type DetailsProps = NativeStackNavigationProp<
 >;
 
 export default function VehicleCard(props: {
+  tie: string;
   name: string;
   noise: number;
   status: "Aprovado" | "Reprovado" | "Pendente";
   image: any;
+  place: string;
+  modelo: string;
+  data: string;
 }) {
   const navigation = useNavigation<DetailsProps>();
 
@@ -24,11 +29,12 @@ export default function VehicleCard(props: {
     navigation.navigate("details", {
       image: props.image,
       name: props.name,
-      modelo: "Cruzeiro de passeio",
+      modelo: props.modelo,
       status: props.status,
-      tie: "#849385",
+      tie: props.tie,
       noise: props.noise,
-      data: "26/05/24",
+      data: props.data,
+      place: props.place,
     });
   };
 
@@ -36,7 +42,11 @@ export default function VehicleCard(props: {
     <View style={styles.container}>
       <View style={{ flex: 1, gap: 16 }}>
         <View style={{ flex: 1, gap: 8 }}>
-          <Text style={styles.title}>{props.name}</Text>
+          <Text style={styles.title}>
+            {props.name.length > 11
+              ? props.name.substring(0, 11) + "..."
+              : props.name}
+          </Text>
           <View style={{ flexDirection: "row" }}>
             <View>
               <Text style={styles.infoLabel}>Resultado</Text>
@@ -56,10 +66,6 @@ export default function VehicleCard(props: {
             </View>
           </View>
         </View>
-        {/* <View style={{ flexDirection: "row", alignItems: "center", gap: 2 }}>
-           <Text style={styles.button}>Ver Detalhes</Text>
-          <RightArrow width={18} height={18} color={COLORS.primary} />
-        </View> touchable to details page */}
         <TouchableOpacity
           style={{ flexDirection: "row", alignItems: "center", gap: 2 }}
           onPress={handlePress}
@@ -69,7 +75,7 @@ export default function VehicleCard(props: {
         </TouchableOpacity>
       </View>
       <View style={styles.imageContainer}>
-        <Image source={props.image} style={styles.image} resizeMode="contain" />
+        <Image source={props.image} style={styles.image} />
       </View>
     </View>
   );
@@ -95,14 +101,14 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   title: {
-    ...textStyles.title_large,
+    ...TEXTSTYLES.title_large,
   },
   infoLabel: {
-    ...textStyles.body_medium,
+    ...TEXTSTYLES.body_medium,
     color: COLORS.subtleDark,
   },
   infoText: {
-    ...textStyles.body_medium,
+    ...TEXTSTYLES.body_medium,
   },
   imageContainer: {
     width: 164,
@@ -114,7 +120,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   button: {
-    ...textStyles.body_large,
+    ...TEXTSTYLES.body_large,
     color: COLORS.primary,
     alignItems: "center",
   },

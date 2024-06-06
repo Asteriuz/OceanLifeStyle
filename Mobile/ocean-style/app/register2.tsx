@@ -1,15 +1,13 @@
 import HideEye from "@/assets/icons/hide_eye";
-import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import ShowEye from "@/assets/icons/show_eye";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
-import { Link, router, useLocalSearchParams } from "expo-router";
+import { TEXTSTYLES } from "@/constants/TextStyles";
+import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   getAuth,
-  fetchSignInMethodsForEmail,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 
@@ -80,7 +78,7 @@ export default function Register2() {
         </Text>
         <View style={{ gap: 24 }}>
           <View style={{ gap: 8 }}>
-            <Text style={textStyles.label_medium}>Nome</Text>
+            <Text style={TEXTSTYLES.label_medium}>Nome</Text>
             <TextInput
               selectionColor={COLORS.primary}
               value={nome}
@@ -89,7 +87,7 @@ export default function Register2() {
             />
           </View>
           <View style={{ gap: 8 }}>
-            <Text style={textStyles.label_medium}>Email</Text>
+            <Text style={TEXTSTYLES.label_medium}>Email</Text>
             <TextInput
               selectionColor={COLORS.primary}
               value={email}
@@ -98,7 +96,7 @@ export default function Register2() {
             />
           </View>
           <View style={{ gap: 8 }}>
-            <Text style={textStyles.label_medium}>Senha</Text>
+            <Text style={TEXTSTYLES.label_medium}>Senha</Text>
             <View>
               <TextInput
                 selectionColor={COLORS.primary}
@@ -131,7 +129,7 @@ export default function Register2() {
               alignItems: "center",
             }}
           >
-            <Text style={[textStyles.label_large, { color: COLORS.white }]}>
+            <Text style={[TEXTSTYLES.label_large, { color: COLORS.white }]}>
               Próximo
             </Text>
           </View>

@@ -1,6 +1,5 @@
-import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
 import { Link } from "expo-router";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -16,13 +15,13 @@ export default function HomeScreen() {
         <View style={{ alignItems: "center", gap: 12 }}>
           <Text
             style={[
-              textStyles.headline_large,
+              TEXTSTYLES.headline_large,
               { color: COLORS.normal, textAlign: "center" },
             ]}
           >
             Explore o Oceano Tranquilo
           </Text>
-          <Text style={[textStyles.body_large, { color: COLORS.normal }]}>
+          <Text style={[TEXTSTYLES.body_large, { color: COLORS.normal }]}>
             Deixando o mar respirar em silêncio
           </Text>
         </View>
@@ -38,7 +37,7 @@ export default function HomeScreen() {
             >
               <Text
                 style={[
-                  textStyles.label_large,
+                  TEXTSTYLES.label_large,
                   { color: COLORS.white, textAlign: "center" },
                 ]}
               >
@@ -59,7 +58,7 @@ export default function HomeScreen() {
             >
               <Text
                 style={[
-                  textStyles.label_large,
+                  TEXTSTYLES.label_large,
                   { color: COLORS.black, textAlign: "center" },
                 ]}
               >
@@ -70,7 +69,7 @@ export default function HomeScreen() {
         </View>
         <Text
           style={[
-            textStyles.label_small,
+            TEXTSTYLES.label_small,
             { color: COLORS.subtleDark, textAlign: "center" },
           ]}
         >

@@ -1,9 +1,8 @@
 import HideEye from "@/assets/icons/hide_eye";
-import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import ShowEye from "@/assets/icons/show_eye";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
-import { useEffect, useState } from "react";
+import { TEXTSTYLES } from "@/constants/TextStyles";
+import { useState } from "react";
 import {
   ActivityIndicator,
   Image,
@@ -91,7 +90,7 @@ export default function Login() {
               marginVertical: -16,
             }}
           >
-            <Text style={[textStyles.label_medium, { color: "#cc0000" }]}>
+            <Text style={[TEXTSTYLES.label_medium, { color: "#cc0000" }]}>
               USUÁRIO OU SENHA INCORRETOS!
             </Text>
           </View>
@@ -100,7 +99,7 @@ export default function Login() {
           <View style={{ gap: 8 }}>
             <Text
               style={[
-                textStyles.label_medium,
+                TEXTSTYLES.label_medium,
                 !emailValid && { color: "#cc0000" },
               ]}
             >
@@ -120,7 +119,7 @@ export default function Login() {
           <View style={{ gap: 8 }}>
             <Text
               style={[
-                textStyles.label_medium,
+                TEXTSTYLES.label_medium,
                 !passwordValid && { color: "#cc0000" },
               ]}
             >
@@ -152,7 +151,7 @@ export default function Login() {
               </Pressable>
             </View>
             <Pressable onPress={() => router.push("/resetPassword")}>
-              <Text style={[textStyles.label_small, { color: "#7C7D81" }]}>
+              <Text style={[TEXTSTYLES.label_small, { color: "#7C7D81" }]}>
                 Esqueceu a senha?
               </Text>
             </Pressable>
@@ -172,7 +171,7 @@ export default function Login() {
               alignItems: "center",
             }}
           >
-            <Text style={[textStyles.label_large, { color: COLORS.white }]}>
+            <Text style={[TEXTSTYLES.label_large, { color: COLORS.white }]}>
               Entrar
             </Text>
           </View>

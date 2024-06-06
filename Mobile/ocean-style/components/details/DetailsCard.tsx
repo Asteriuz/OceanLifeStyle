@@ -1,11 +1,6 @@
-import RightArrow from "@/assets/icons/right_arrow";
 import { COLORS } from "@/constants/Colors";
-import { RootStackParamList } from "@/constants/RootStackParamList";
-import { textStyles } from "@/constants/Text";
-import { useNavigation, useRouter } from "expo-router";
-import { useState } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { NativeStackNavigationProp } from "react-native-screens/lib/typescript/native-stack/types";
+import { TEXTSTYLES } from "@/constants/TextStyles";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function DetailsCard(props: {
   icon: any;
@@ -15,8 +10,10 @@ export default function DetailsCard(props: {
   return (
     <View style={styles.container}>
       <props.icon width={24} height={24} color={COLORS.subtleDark} />
-      <Text style={styles.text}>{props.text}</Text>
-      <Text style={styles.label}>{props.label}</Text>
+      <View>
+        <Text style={styles.text}>{props.text}</Text>
+        <Text style={styles.label}>{props.label}</Text>
+      </View>
     </View>
   );
 }
@@ -36,13 +33,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    gap: 4,
   },
   text: {
-    ...textStyles.headline_medium,
+    ...TEXTSTYLES.headline_medium,
     color: COLORS.primary,
+    fontSize: 24,
   },
   label: {
-    ...textStyles.body_large,
+    ...TEXTSTYLES.body_large,
     color: COLORS.normal,
   },
 });

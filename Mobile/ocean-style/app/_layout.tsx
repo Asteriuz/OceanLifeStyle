@@ -53,7 +53,7 @@ function RootLayoutNav() {
         contentStyle: { backgroundColor: COLORS.white },
       }}
     >
-      {/* <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen
         name="login"
         options={{
@@ -84,7 +84,7 @@ function RootLayoutNav() {
           animation: "slide_from_right",
           headerTitle: () => <ProgressBar progress={0.66} />,
         }}
-      /> */}
+      />
       <Stack.Screen
         name="(tabs)"
         options={{ headerShown: false, animation: "fade_from_bottom" }}

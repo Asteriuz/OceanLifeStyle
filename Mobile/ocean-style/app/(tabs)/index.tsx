@@ -1,46 +1,45 @@
 import VehicleCard from "@/components/home/VehicleCard";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
+import { VEHICLESFAKEDATA } from "@/constants/VehicleFakeData";
 import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { onValue, ref } from "firebase/database";
+import { db } from "@/firebaseConfig";
+
+interface VehicleProps {
+  tie: string;
+  name: string;
+  modelo: string;
+  noise: number;
+  status: "Aprovado" | "Reprovado" | "Pendente";
+  image: string;
+  place: string;
+  data: string;
+}
 
 export default function TabOneScreen() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
 
-  const vehicles = [
-    {
-      name: "Corsário",
-      noise: 60,
-      status: "Aprovado" as const,
-      image: require("@/assets/images/vehicles/Cruise.png"),
-    },
-    {
-      name: "Azimut 60",
-      noise: 70,
-      status: "Pendente" as const,
-      image: require("@/assets/images/vehicles/Azimut-60.png"),
-    },
-    {
-      name: "Lagoon 450",
-      noise: 90,
-      status: "Reprovado" as const,
-      image: require("@/assets/images/vehicles/Lagoon.jpg"),
-    },
-    {
-      name: "Cigarette Racing",
-      noise: 105,
-      status: "Reprovado" as const,
-      image: require("@/assets/images/vehicles/Cigarette.jpg"),
-    },
-    {
-      name: "Viking 55",
-      noise: 95,
-      status: "Aprovado" as const,
-      image: require("@/assets/images/vehicles/Viking-55.jpg"),
-    },
-  ];
+  const [vehicles, setVehicles] = useState<VehicleProps[]>([]);
+
+  useEffect(() => {
+    const vehicleRef = ref(db, "vehicles/");
+    onValue(vehicleRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const vehicles = Object.keys(data).map((key) => {
+          return {
+            tie: key,
+            ...data[key],
+          };
+        });
+        setVehicles(vehicles);
+      }
+    });
+  }, []);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.surface }}>
@@ -101,10 +100,14 @@ export default function TabOneScreen() {
             .map((vehicle, index) => (
               <VehicleCard
                 key={index}
+                tie={vehicle.tie}
                 name={vehicle.name}
+                modelo={vehicle.modelo}
                 noise={vehicle.noise}
                 status={vehicle.status}
                 image={vehicle.image}
+                place={vehicle.place}
+                data={vehicle.data}
               />
             ))}
         </ScrollView>
@@ -130,7 +133,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
   },
   title: {
-    ...textStyles.title_large,
+    ...TEXTSTYLES.title_large,
     lineHeight: 32,
     color: COLORS.normal,
     fontSize: 32,
@@ -143,7 +146,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.normal,
   },
   categoriaText: {
-    ...textStyles.body_medium,
+    ...TEXTSTYLES.body_medium,
     paddingVertical: 8,
     color: COLORS.subtleDark,
   },

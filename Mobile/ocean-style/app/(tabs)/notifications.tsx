@@ -1,6 +1,5 @@
-import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -24,7 +23,7 @@ export default function TabOneScreen() {
           <Text style={styles.title}>Conecte-se à Internet</Text>
           <Text
             style={[
-              textStyles.label_large,
+              TEXTSTYLES.label_large,
               {
                 color: COLORS.subtleDark,
                 textAlign: "center",
@@ -43,7 +42,7 @@ export default function TabOneScreen() {
             borderRadius: 10,
           }}
         >
-          <Text style={[textStyles.headline_small, { color: "white" }]}>
+          <Text style={[TEXTSTYLES.headline_small, { color: "white" }]}>
             TENTAR NOVAMENTE
           </Text>
         </View>

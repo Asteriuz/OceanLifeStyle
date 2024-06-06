@@ -1,6 +1,5 @@
-import ImagePlaceholder from "@/assets/icons/imagePlaceholder";
 import { COLORS } from "@/constants/Colors";
-import { textStyles } from "@/constants/Text";
+import { TEXTSTYLES } from "@/constants/TextStyles";
 import {
   Dimensions,
   Image,
@@ -46,7 +45,7 @@ export default function TabOneScreen() {
           <Text style={styles.title}>Em manunteção</Text>
           <Text
             style={[
-              textStyles.label_large,
+              TEXTSTYLES.label_large,
               {
                 color: COLORS.subtleDark,
                 textAlign: "center",
@@ -66,7 +65,7 @@ export default function TabOneScreen() {
           }}
           onPress={handleLogout}
         >
-          <Text style={[textStyles.headline_small, { color: "white" }]}>
+          <Text style={[TEXTSTYLES.headline_small, { color: "white" }]}>
             DESLOGAR
           </Text>
         </Pressable>

@@ -42,3 +42,22 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Total Geral de Cidades: ' || total_geral);
 END;
 /
+
+-- BLOCO ANÔNIMO PARA ATUALIZAÇÃO DE NOME DE UM ESTADO
+DECLARE
+    v_id NUMBER := 1;
+    v_novo_nome VARCHAR2(50) := 'Estado Atualizado Teste';
+BEGIN
+    UPDATE GS_ESTADO
+    SET NOME = v_novo_nome
+    WHERE ID = v_id;
+    IF SQL%ROWCOUNT > 0 THEN
+  DBMS_OUTPUT.PUT_LINE('Nome atualizado para o ID ' || v_id);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Nenhum dado encontrado para o ID ' || v_id);
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Erro ao atualizar o nome: ' || SQLERRM);
+END;
+/

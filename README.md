@@ -163,7 +163,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
 - [x] Utilizar navegação no aplicativo conforme sua escolha (10 pts)
 
-- [ ] Implementar um CRUD com Firebase e/ou uma API REST (para API REST: forneça um endpoint funcional fakeapi ou mock) (10 pts)
+- [x] Implementar um CRUD com Firebase e/ou uma API REST (para API REST: forneça um endpoint funcional fakeapi ou mock) (10 pts)
 
 - [ ] Tratar os erros das requisições de forma adequada (20 pts)
 

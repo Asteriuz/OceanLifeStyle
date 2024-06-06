@@ -1,8 +1,16 @@
 import RightArrow from "@/assets/icons/right_arrow";
 import { COLORS } from "@/constants/Colors";
+import { RootStackParamList } from "@/constants/RootStackParamList";
 import { textStyles } from "@/constants/Text";
+import { useNavigation, useRouter } from "expo-router";
 import { useState } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { NativeStackNavigationProp } from "react-native-screens/lib/typescript/native-stack/types";
+
+type DetailsProps = NativeStackNavigationProp<
+  RootStackParamList,
+  "vehicleCard"
+>;
 
 export default function VehicleCard(props: {
   name: string;
@@ -10,6 +18,20 @@ export default function VehicleCard(props: {
   status: "Aprovado" | "Reprovado" | "Pendente";
   image: any;
 }) {
+  const navigation = useNavigation<DetailsProps>();
+
+  const handlePress = () => {
+    navigation.navigate("details", {
+      image: props.image,
+      name: props.name,
+      modelo: "Cruzeiro de passeio",
+      status: props.status,
+      tie: "#849385",
+      noise: props.noise,
+      data: "26/05/24",
+    });
+  };
+
   return (
     <View style={styles.container}>
       <View style={{ flex: 1, gap: 16 }}>
@@ -34,10 +56,17 @@ export default function VehicleCard(props: {
             </View>
           </View>
         </View>
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 2 }}>
+        {/* <View style={{ flexDirection: "row", alignItems: "center", gap: 2 }}>
            <Text style={styles.button}>Ver Detalhes</Text>
           <RightArrow width={18} height={18} color={COLORS.primary} />
-        </View>
+        </View> touchable to details page */}
+        <TouchableOpacity
+          style={{ flexDirection: "row", alignItems: "center", gap: 2 }}
+          onPress={handlePress}
+        >
+          <Text style={styles.button}>Ver Detalhes</Text>
+          <RightArrow width={18} height={18} color={COLORS.primary} />
+        </TouchableOpacity>
       </View>
       <View style={styles.imageContainer}>
         <Image source={props.image} style={styles.image} resizeMode="contain" />

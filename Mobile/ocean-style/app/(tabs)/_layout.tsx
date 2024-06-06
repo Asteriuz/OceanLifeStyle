@@ -72,6 +72,13 @@ export default function TabLayout() {
           ),
         }}
       />
+      {/* tab details but not show in tab bar */}
+      <Tabs.Screen
+        name="details"
+        options={{
+          href: null,
+        }}
+      />
       <Tabs.Screen
         name="search"
         options={{

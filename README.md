@@ -21,7 +21,7 @@
   </ol>
 </details>
 
-<h2 name="sobre">📖 Sobre a Global Solution</h2>
+<h2 id="sobre">📖 Sobre a Global Solution</h2>
 
 | _Global Solution 2_ |                                        |
 | ------------------- | -------------------------------------- |
@@ -30,19 +30,19 @@
 | _Período_           | 1º                                     |
 | _Tema_              | [PDF](./utils/pdfs/GlobalSolution.pdf) |
 
-<h2 name="requisitos">📋 Requisitos</h2>
+<h2 id="requisitos">📋 Requisitos</h2>
 
 <h3>COMPLIANCE & QUALITY ASSURANCE</h3>
 
-- [ ] (20 pts) Entrega 1: Plano de backlog de produto, no padrão Scrum, contendo Épicos, Funcionalidades e Itens /componentes da solução.
+- [x] (20 pts) Entrega 1: Plano de backlog de produto, no padrão Scrum, contendo Épicos, Funcionalidades e Itens /componentes da solução.
 
-- [ ] (30 pts) Entrega 2: Descrição dos itens do backlog de produto, explicando quem solicita/necessita do item, por que precisa do item e qual a expectativa de funcionamento; e definição do critério de aceite de cada um, contendo detalhes de formato da entrega do item (explicação de como deve ser construída a aplicação, explicando linguagem de programação a utilizar, padrões de interface de uso/operação, testes/validações que precisam ser feitos).
+- [x] (30 pts) Entrega 2: Descrição dos itens do backlog de produto, explicando quem solicita/necessita do item, por que precisa do item e qual a expectativa de funcionamento; e definição do critério de aceite de cada um, contendo detalhes de formato da entrega do item (explicação de como deve ser construída a aplicação, explicando linguagem de programação a utilizar, padrões de interface de uso/operação, testes/validações que precisam ser feitos).
 
-- [ ] (50 pts) Entrega 3: Arquitetura da solução, representada em um diagrama no padrão TOGAF, utilizando o software Archi (Archimate). Essa arquitetura deve conter: Visão da Arquitetura, Arquitetura de Negócio, Arquitetura de Sistema e Arquitetura de Tecnologia.
+- [x] (50 pts) Entrega 3: Arquitetura da solução, representada em um diagrama no padrão TOGAF, utilizando o software Archi (Archimate). Essa arquitetura deve conter: Visão da Arquitetura, Arquitetura de Negócio, Arquitetura de Sistema e Arquitetura de Tecnologia.
 
 - [ ] Entrega: arquivo .ZIP, no portal do aluno FIAP, na área de trabalhos, no trabalho aberto especificamente para a GS. O .ZIP precisa conter o Nome do Projeto, Nome e RM dos alunos integrantes do grupo, o link de acesso ao plano de projeto cadastrado no Azure Boards ou outra ferramenta de planejamento autorizada pelo professor, um arquivo PDF contendo o desenho da arquitetura (não envie o arquivo original feito em Archi).
 
-- [ ] OBS: O Archi possui a opção de gerar PDF. O plano de projeto criado no Azure ou outra ferramenta precisa estar PUBLICO, de forma a facilitar o acesso integral do professor que corrigirá o trabalho.
+- [x] OBS: O Archi possui a opção de gerar PDF. O plano de projeto criado no Azure ou outra ferramenta precisa estar PUBLICO, de forma a facilitar o acesso integral do professor que corrigirá o trabalho.
 
 <h3>MASTERING RELATIONAL AND NON-RELATIONAL DATABASE</h3>
 
@@ -82,13 +82,13 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
   - [x] Realizar uma dissertação sobre seu projeto, seus objetivos e solução proposta (5 pontos)
 
-  - [ ] Desenhar a Arquitetura do projeto de DevOps (Draw.io, Visual Paradigm ou Excalidraw) (30 pontos)
+  - [x] Desenhar a Arquitetura do projeto de DevOps (Draw.io, Visual Paradigm ou Excalidraw) (30 pontos)
 
   - [x] Entregar Arquivo PDF com capa incluindo o nome do Grupo (Solução) e integrantes e RM de cada aluno (Obrigatório)
 
   - [x] Link do GitHub com os Códigos-fontes, README.md, Dockerfile e Arquivo YAML (Obrigatório)
 
-  - [ ] Persistência de dados acompanhada de um Volume (15 pontos)
+  - [x] Persistência de dados acompanhada de um Volume (15 pontos)
 
   - [ ] Link do vídeo no YouTube comprovando o funcionamento do App, partindo desde o clone do repositório em sua máquina local até a persistência de dados. Mostre todos os detalhes de cada passo (50 pontos)
     - A solução deve conter:
@@ -106,7 +106,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
 - [x] Persistência de dados com Spring Data JPA
 
-- [x] Mapeamento de relacionamentos entre tabelas e pesquisas
+- [ ] Mapeamento de relacionamentos entre tabelas e pesquisas
 
 - [x] Validação com Bean Validation
 
@@ -118,9 +118,11 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
 - [x] Documentação com SWAGGER
 
-- [ ] Deploy em nuvem
+~~-Deploy em nuvem~~
 
-- [ ] Utilização adequada dos verbos HTTP e códigos de status
+- [x] Utilização adequada dos verbos HTTP e códigos de status
+
+- [ ] Vídeo demonstrando o funcionamento do software
 
 <h4>Critérios de Avaliação</h4>
 
@@ -198,7 +200,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
   - Código fonte completo (limpe a solução antes de compactar)
   - Imagem Modelo Entidade Relacionamento (MER)
 
-<h2 name="autores">✍️ Integrantes</h2>
+<h2 id="autores">✍️ Integrantes</h2>
 <table>
   <tr>
     <td align="center">

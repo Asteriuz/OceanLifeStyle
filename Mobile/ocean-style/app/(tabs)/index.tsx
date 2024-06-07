@@ -1,13 +1,14 @@
 import VehicleCard from "@/components/home/VehicleCard";
 import { COLORS } from "@/constants/Colors";
 import { TEXTSTYLES } from "@/constants/TextStyles";
-import { VEHICLESFAKEDATA } from "@/constants/VehicleFakeData";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { onValue, ref } from "firebase/database";
 import { db } from "@/firebaseConfig";
+import ErrorPage from "@/components/error/ErrorPage";
+import { router } from "expo-router";
 
 interface VehicleProps {
   tie: string;
@@ -24,6 +25,14 @@ export default function TabOneScreen() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
 
   const [vehicles, setVehicles] = useState<VehicleProps[]>([]);
+
+  const handlePress = async () => {
+    try {
+      router.replace("/search");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     const vehicleRef = ref(db, "vehicles/");
@@ -42,9 +51,9 @@ export default function TabOneScreen() {
   }, []);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.surface }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <StatusBar backgroundColor={COLORS.white} translucent={false} />
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: COLORS.surface }}>
         <View style={styles.topSection}>
           <Text style={styles.title}>Meus Veículos</Text>
           <View style={{ flexDirection: "row", gap: 24 }}>
@@ -86,31 +95,43 @@ export default function TabOneScreen() {
             </Text>
           </View>
         </View>
-        <ScrollView
-          contentContainerStyle={{ paddingHorizontal: 24, paddingTop: 24 }}
-          showsVerticalScrollIndicator={false}
-          nestedScrollEnabled
-        >
-          {vehicles
-            .filter((vehicle) =>
-              selectedCategory === "Todos"
-                ? true
-                : vehicle.status === selectedCategory
-            )
-            .map((vehicle, index) => (
-              <VehicleCard
-                key={index}
-                tie={vehicle.tie}
-                name={vehicle.name}
-                modelo={vehicle.modelo}
-                noise={vehicle.noise}
-                status={vehicle.status}
-                image={vehicle.image}
-                place={vehicle.place}
-                data={vehicle.data}
-              />
-            ))}
-        </ScrollView>
+
+        {vehicles.length === 0 ? (
+          <ErrorPage
+            gap={24}
+            image={require("@/assets/images/illustration/empty-beach.png")}
+            title1="Sem Veículos, Ainda"
+            subtitle="Dirija-se a nossa unidade mais próxima para realizar a vistoria do veículo"
+            buttonText="Ver As Unidades"
+            handlePress={handlePress}
+          />
+        ) : (
+          <ScrollView
+            contentContainerStyle={{ paddingHorizontal: 24, paddingTop: 24 }}
+            showsVerticalScrollIndicator={false}
+            nestedScrollEnabled
+          >
+            {vehicles
+              .filter((vehicle) =>
+                selectedCategory === "Todos"
+                  ? true
+                  : vehicle.status === selectedCategory
+              )
+              .map((vehicle, index) => (
+                <VehicleCard
+                  key={index}
+                  tie={vehicle.tie}
+                  name={vehicle.name}
+                  modelo={vehicle.modelo}
+                  noise={vehicle.noise}
+                  status={vehicle.status}
+                  image={vehicle.image}
+                  place={vehicle.place}
+                  data={vehicle.data}
+                />
+              ))}
+          </ScrollView>
+        )}
       </View>
     </SafeAreaView>
   );

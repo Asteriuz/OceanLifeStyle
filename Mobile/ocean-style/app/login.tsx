@@ -54,6 +54,7 @@ export default function Login() {
       setEmail(email.trim());
       const user = await signInWithEmailAndPassword(auth, email, password);
       setIsLogin(true);
+      router.dismissAll();
       router.replace("/(tabs)");
     } catch (error) {
       console.log(error);

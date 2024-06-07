@@ -84,7 +84,7 @@ export default function TabLayout() {
         options={{
           tabBarLabel: () => null,
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="search" color={color} label="Vistoria" />
+            <TabBarIcon name="search" color={color} label="Unidades" />
           ),
         }}
       />

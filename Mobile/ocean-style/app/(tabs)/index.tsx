@@ -33,21 +33,29 @@ export default function TabOneScreen() {
       console.log(error);
     }
   };
-
+  
   useEffect(() => {
-    const vehicleRef = ref(db, "vehicles/");
-    onValue(vehicleRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const vehicles = Object.keys(data).map((key) => {
-          return {
-            tie: key,
-            ...data[key],
-          };
+    const fetchVehicles = async () => {
+      try {
+        const vehicleRef = ref(db, "vehicles/");
+        onValue(vehicleRef, (snapshot) => {
+          const data = snapshot.val();
+          if (data) {
+            const vehicles = Object.keys(data).map((key) => {
+              return {
+                tie: key,
+                ...data[key],
+              };
+            });
+            setVehicles(vehicles);
+          }
         });
-        setVehicles(vehicles);
+      } catch (error) {
+        console.error(error);
       }
-    });
+    };
+
+    fetchVehicles();
   }, []);
 
   return (

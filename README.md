@@ -40,7 +40,7 @@
 
 - [x] (50 pts) Entrega 3: Arquitetura da solução, representada em um diagrama no padrão TOGAF, utilizando o software Archi (Archimate). Essa arquitetura deve conter: Visão da Arquitetura, Arquitetura de Negócio, Arquitetura de Sistema e Arquitetura de Tecnologia.
 
-- [ ] Entrega: arquivo .ZIP, no portal do aluno FIAP, na área de trabalhos, no trabalho aberto especificamente para a GS. O .ZIP precisa conter o Nome do Projeto, Nome e RM dos alunos integrantes do grupo, o link de acesso ao plano de projeto cadastrado no Azure Boards ou outra ferramenta de planejamento autorizada pelo professor, um arquivo PDF contendo o desenho da arquitetura (não envie o arquivo original feito em Archi).
+- [x] Entrega: arquivo .ZIP, no portal do aluno FIAP, na área de trabalhos, no trabalho aberto especificamente para a GS. O .ZIP precisa conter o Nome do Projeto, Nome e RM dos alunos integrantes do grupo, o link de acesso ao plano de projeto cadastrado no Azure Boards ou outra ferramenta de planejamento autorizada pelo professor, um arquivo PDF contendo o desenho da arquitetura (não envie o arquivo original feito em Archi).
 
 - [x] OBS: O Archi possui a opção de gerar PDF. O plano de projeto criado no Azure ou outra ferramenta precisa estar PUBLICO, de forma a facilitar o acesso integral do professor que corrigirá o trabalho.
 
@@ -90,7 +90,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
   - [x] Persistência de dados acompanhada de um Volume (15 pontos)
 
-  - [ ] Link do vídeo no YouTube comprovando o funcionamento do App, partindo desde o clone do repositório em sua máquina local até a persistência de dados. Mostre todos os detalhes de cada passo (50 pontos)
+  - [x] Link do vídeo no YouTube comprovando o funcionamento do App, partindo desde o clone do repositório em sua máquina local até a persistência de dados. Mostre todos os detalhes de cada passo (50 pontos)
     - A solução deve conter:
       - O projeto deve ser rodado em Background
       - Utilize imagens para o ponto de partida que apresentem um melhor desempenho de acordo com sua aplicação
@@ -106,7 +106,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
 - [x] Persistência de dados com Spring Data JPA
 
-- [ ] Mapeamento de relacionamentos entre tabelas e pesquisas
+- [x] Mapeamento de relacionamentos entre tabelas e pesquisas
 
 - [x] Validação com Bean Validation
 
@@ -122,7 +122,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
 - [x] Utilização adequada dos verbos HTTP e códigos de status
 
-- [ ] Vídeo demonstrando o funcionamento do software
+- [x] Vídeo demonstrando o funcionamento do software
 
 <h4>Critérios de Avaliação</h4>
 
@@ -167,7 +167,7 @@ _Opção 1: Implementação em Docker Compose de um dos projetos solicitados nas
 
 - [x] Implementar um CRUD com Firebase e/ou uma API REST (para API REST: forneça um endpoint funcional fakeapi ou mock) (10 pts)
 
-- [ ] Tratar os erros das requisições de forma adequada (20 pts)
+- [x] Tratar os erros das requisições de forma adequada (20 pts)
 
 - [x] Estilização do aplicativo, incluindo cores, fontes e imagens personalizadas (30 pts)
 
